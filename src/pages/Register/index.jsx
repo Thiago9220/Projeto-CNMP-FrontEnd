@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { LayoutComponents } from "../../components/LayoutComponents"
-
+import React from 'react';
 import cnmpIMG from '../../assets/cnmp.jpg'
 
 
@@ -64,3 +64,5 @@ export const Register = () => {
     </LayoutComponents>
   )
 }
+
+export default Register;

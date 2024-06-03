@@ -1,4 +1,6 @@
 import "./styles.css";
+import React from 'react';
+
 export const LayoutComponents = (props) => {
   return (
     <div className="container">

@@ -1,21 +1,20 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import cnmpIMG from "../../assets/cnmp.jpg";
 import { LayoutComponents } from "../../components/LayoutComponents";
 
-export const Login = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   return (
     <LayoutComponents>
       <form className="login-form">
-
         <span className="login-form-title">
           <img src={cnmpIMG} alt="Usuário do CNMP" />
         </span>
 
-        <span className="login-form-title"> Bem vindo </span>
+        <span className="login-form-title">Bem vindo</span>
 
         <div className="wrap-input">
           <input
@@ -51,3 +50,5 @@ export const Login = () => {
     </LayoutComponents>
   );
 };
+
+export default Login;
