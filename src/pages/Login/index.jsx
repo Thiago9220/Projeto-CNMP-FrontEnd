@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 import cnmpIMG from "../../assets/cnmp.jpg";
 import { LayoutComponents } from "../../components/LayoutComponents";
+import { Link } from 'react-router-dom';
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+
+    localStorage.setItem('token', 'seuTokenDeAutenticacao');
+
+
+    navigate('/HomePageLogada');
+  };
 
   return (
     <LayoutComponents>
@@ -37,7 +48,7 @@ const Login = () => {
         </div>
 
         <div className="container-login-form-btn">
-          <button className="login-form-btn">Login</button>
+          <button className="login-form-btn" onClick={handleLogin}>Login</button>
         </div>
 
         <div className="text-center">
